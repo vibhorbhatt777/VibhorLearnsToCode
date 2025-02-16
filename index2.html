@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibhor Bhatt Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #2c3e50;
+      background: linear-gradient(120deg, #f6f9fc, #eaf0f7);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(52, 152, 219, 0.3) 20%, transparent 60%),
+                  radial-gradient(circle, rgba(155, 89, 182, 0.3) 20%, transparent 60%);
+      animation: backgroundMove 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes backgroundMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-50px, -50px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    .sidebar {
+      position: fixed;
+      width: 30%;
+      height: 100vh;
+      background: #34495e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sidebar h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #1abc9c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #1abc9c;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .links a {
+      text-decoration: none;
+      color: white;
+      margin: 10px 0;
+      padding: 10px 20px;
+      display: inline-block;
+      background: #1abc9c;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    .links a:hover {
+      background: #16a085;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .main-content {
+      margin-left: 30%;
+      padding: 40px;
+      animation: fadeIn 1.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      position: relative;
+      color: #34495e;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: #1abc9c;
+      bottom: -10px;
+      left: 0;
+    }
+
+    .introduction p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #2c3e50;
+    }
+
+    .publications, .affiliations, .achievements {
+      margin-top: 40px;
+    }
+
+    .achievement-item, .publication-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      background: #ecf0f1;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .achievement-item:hover, .publication-item:hover {
+      transform: scale(1.05);
+    }
+
+    .publication-image {
+      width: 120px;
+      height: 80px;
+      margin-right: 20px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .company-logo {
+      width: 100px;
+      margin: 10px;
+      transition: transform 0.3s;
+    }
+
+    .company-logo:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Vibhor Bhatt</h1>
+    <img src="img1.jpeg" alt="Profile Photo" class="profile-photo">
+    <div class="links">
+      <a href="path/to/resume.pdf" target="_blank">Resume</a>
+      <a href="mailto:bvibhor572@gmail.com">Email</a>
+      <a href="https://github.com/vibhorbhatt777" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/vibhor-bhatt-996480176/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <section class="introduction">
+      <h2>About Me</h2>
+      <p>Aspiring Software Developer with a strong foundation in ML, Generative AI, and NLP. Leadership experience as Tech Head at Marvel Cart (Society of IT Engineers) and competitive coding enthusiast.</p>
+      <p>Graduated from Jaipur Engineering College And Research Center in 2025 with a B.Tech in IT (CGPA: 8.5).</p>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+      <div class="achievement-item">
+        <div>
+          <strong>Data Science Intern</strong> - Upflairs (March 2024 - October 2024)
+          <p>Developed a hybrid log classification system integrating Regex, Sentence Transformer, Logistic Regression, and LLMs, improving log classification accuracy by 40%.</p>
+          <p><strong>Tech Stack:</strong> Python, Sentence Transformer, Scikit-learn, LLMs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="achievements">
+      <h2>Achievements</h2>
+      <div class="achievement-item">
+        <p><strong>Codechef 2 STAR:</strong> World Rank 25459 | Country Rank 22680</p>
+      </div>
+      <div class="achievement-item">
+        <p><strong>LeetCode Weekly Contest:</strong> Rating 1444 | World Rank 9440</p>
+      </div>
+      <div class="achievement-item">
+        <p><strong>Oracle Cloud Generative AI:</strong> Certified in OCI Generative AI</p>
+      </div>
+    </section>
+
+    <section class="publications">
+      <h2>Publications</h2>
+      <div class="publication-item">
+        <img src="paper.jpeg" alt="Publication Thumbnail" class="publication-image">
+        <div>
+          <strong>Federated-based Approach to Twitter Sentiment Analysis</strong>
+          <p>Enhancing data privacy while maintaining model accuracy through federated learning. Published in JAC 2023.</p>
+          <a href="https://www.researchgate.net/publication/376216902_FEDERATED-BASED_APPROACH_TO_TWITTER_SENTIMENT_ANALYSIS" target="_blank">View Publication &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="achievement-item">
+        <strong>Neural Style Transfer:</strong>
+        <p>Implemented image style transfer using the VGG19 architecture in PyTorch.</p>
+      </div>
+      <div class="achievement-item">
+        <strong>Sentence Similarity Checker:</strong>
+        <p>Developed a robust application with TF-IDF, BERT, and Word2Vec models using Streamlit.</p>
+      </div>
+      <div class="achievement-item">
+        <strong>Gym Management System:</strong>
+        <p>Created an interactive file management system in C++ for users and managers.</p>
+      </div>
+    </section>
+
+    <section class="affiliations">
+      <h2>Affiliations</h2>
+      <img src="jecrc.jpeg" alt="JECRC Foundation" class="company-logo">
+      <img src="upflairs.jpeg" alt="Upflairs" class="company-logo">
+    </section>
+
+    <footer>
+      &copy; 2025 Vibhor Bhatt. All Rights Reserved.
+    </footer>
+  </div>
+
+  <script>
+    ScrollReveal().reveal('.sidebar', { delay: 300, origin: 'left', distance: '50px' });
+    ScrollReveal().reveal('.main-content h2, .main-content p, .publication-item, .achievement-item', { delay: 300, interval: 200 });
+  </script>
+</body>
+</html>
